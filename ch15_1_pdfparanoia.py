@@ -45,6 +45,8 @@ for path, subfolders, files in os.walk(folder_location):
         # Decrypt with password before copying
         if pdf_reader.isEncrypted:
             pdf_reader.decrypt('dayoldcroissant')
+            if PyPDF2.utils.PdfReadError:
+                print("PDF Error! The password entered is incorrect.")
         # Copy all reader pages to writer object using .addPage
         for page_num in range(pdf_reader.numPages):
             pdf_writer.addPage(pdf_reader.getPage(page_num))
