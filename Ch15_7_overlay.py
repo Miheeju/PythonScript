@@ -1,5 +1,6 @@
 # Goal: Overlay a 'confidential' watermark over first 3 pages of Driver Guide PDF document. Save as new PDF.
 # Note: The book exercise is with an overlay over 1 page only. I wanted to try this with multiple pages.
+# Note2: The overlay is 100% opaque but blank areas are 100% transparent. Image or text from the overlaid file has 0% transparency.
 
 # Step 1: Import Library
 import PyPDF2 as pypdf2
